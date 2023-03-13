@@ -24,4 +24,13 @@ a {
   text-decoration: none;
   color: inherit;
   font-family: inherit;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 48px 288px;
 }/*# sourceMappingURL=styles.css.map */
