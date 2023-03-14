@@ -9,13 +9,14 @@
     --color-primary:#2C3333;
     --color-titles: #0E8388;
     --color-text: #CBE4DE;
+    --color-icons: #2E4F4F;
 
 }
 
 body{
     background-color:var(--color-primary);
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 17.5px;
     color: var(--color-text);
     transition: all .4s ease-in-out;
 }
@@ -79,6 +80,15 @@ section{
     align-items: center;
     justify-content: center;
     transform: translate(-50%);
+
+    .active-btn{
+        background-color:var(--color-text) !important;
+        transition: all .4s ease-in-out;
+        i{
+            color: var(--color-titles) !important;
+        }
+    }
+
     .control{
         padding: 1rem;
         cursor: pointer;
@@ -90,5 +100,9 @@ section{
         justify-content: center;
         align-items: center;
         margin: .7rem 0;
+        i{
+            font-size: larger;
+            
+        }
     }
 }

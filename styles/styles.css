@@ -9,12 +9,13 @@
   --color-primary:#2C3333;
   --color-titles: #0E8388;
   --color-text: #CBE4DE;
+  --color-icons: #2E4F4F;
 }
 
 body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 17.5px;
   color: var(--color-text);
   transition: all 0.4s ease-in-out;
 }
@@ -78,6 +79,13 @@ section {
   justify-content: center;
   transform: translate(-50%);
 }
+.controls .active-btn {
+  background-color: var(--color-text) !important;
+  transition: all 0.4s ease-in-out;
+}
+.controls .active-btn i {
+  color: var(--color-titles) !important;
+}
 .controls .control {
   padding: 1rem;
   cursor: pointer;
@@ -89,4 +97,7 @@ section {
   justify-content: center;
   align-items: center;
   margin: 0.7rem 0;
+}
+.controls .control i {
+  font-size: larger;
 }/*# sourceMappingURL=styles.css.map */
