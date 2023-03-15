@@ -18,7 +18,7 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 17.5px;
     color: var(--color-text);
-    transition: all .4s ease-in-out;
+    //transition: all .4s ease-in-out;
 }
 
 a{
@@ -45,7 +45,7 @@ section{
 
 .section{
     transform: translateY(-100%) scale(0);
-    transition: all .4s ease-in-out;
+    
     background-color: var(--color-primary);
 }
 
@@ -57,18 +57,33 @@ section{
 .sec2{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: var(--color-titles);
+    background-color: blueviolet;
 }
 
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: var(--color-text);
+    background-color: yellow;
 }
 
 .sec4{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: red;
+}
+
+
+.active{
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+    @keyframes scaleAnim {
+        0%{
+            transform: translateY(-100%) scaleY(0);
+        }
+        100%{
+            transform: translateY(0) scaleY(1);
+        }
+    }
 }
 
 //Controls
@@ -85,7 +100,7 @@ section{
 
     .active-btn{
         background-color:var(--color-text) !important;
-        transition: all .4s ease-in-out;
+        //transition: all .4s ease-in-out;
         i{
             color: var(--color-titles) !important;
         }
@@ -102,9 +117,63 @@ section{
         justify-content: center;
         align-items: center;
         margin: .7rem 0;
+        //Agregar box shadow!!
         i{
             font-size: larger;
             
         }
     }
 }
+
+/*Header-content*/
+
+.header-content{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100%;
+    .left-header{
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: 20%;
+        .h-shape{
+            transition:all .4s ease-in-out;
+            width: 75%;
+            height: 100%;
+            background-color: var(--color-icons);
+            position: absolute;
+            left: -20%;
+            top: 0;
+            z-index: -1;
+            clip-path: polygon(0 0, 46% 0, 70% 100%, 0% 100%);
+        }
+        .image{
+           
+        }
+    }
+    .right-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 12rem;
+        left: 10%;
+        .title{
+            font-size: 2rem;
+            span{
+                color: var(--color-titles);
+            }
+        }
+        p{
+            margin: 1.5rem 0;
+            line-height: 2rem;
+
+        }
+        
+    }
+}
+
+
+
+
+/*Independent_Components*/
+
