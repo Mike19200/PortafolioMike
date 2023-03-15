@@ -57,11 +57,13 @@ section{
 .sec2{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: var(--color-titles);
 }
 
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: var(--color-text);
 }
 
 .sec4{
