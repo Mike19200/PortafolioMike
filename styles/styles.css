@@ -49,12 +49,17 @@ section {
 .sec1 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: var(--color-primary);
 }
 
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: blueviolet;
+  background-color: var(--color-primary);
+  background: radial-gradient(circle, #2E4F4F 10%, transparent 11%), radial-gradient(circle at bottom left, #2E4F4F 5%, transparent 6%), radial-gradient(circle at bottom right, #2E4F4F 5%, transparent 6%), radial-gradient(circle at top left, #2E4F4F 5%, transparent 6%), radial-gradient(circle at top right, #2E4F4F 5%, transparent 6%);
+  background-size: 1em 1em;
+  background-color: #2C3333;
+  opacity: 1;
 }
 
 .sec3 {
@@ -71,15 +76,15 @@ section {
 
 .active {
   display: block;
-  animation: scaleAnim 1s ease-in-out;
-}
-@keyframes scaleAnim {
-  0% {
-    transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    transform: translateY(0) scaleY(1);
-  }
+  /*(animation: scaleAnim 1s ease-in-out;
+  @keyframes scaleAnim {
+      0%{
+          transform: translateY(-100%) scaleY(0);
+      }
+      100%{
+          transform: translateY(0) scaleY(1);
+      }
+  }*/
 }
 
 .controls {
@@ -94,6 +99,8 @@ section {
   transform: translate(-50%);
 }
 .controls .active-btn {
+  box-shadow: 0 2px 0 var(--color-icons);
+  transform: translateY(3px);
   background-color: var(--color-text) !important;
 }
 .controls .active-btn i {
@@ -110,9 +117,11 @@ section {
   justify-content: center;
   align-items: center;
   margin: 0.7rem 0;
+  box-shadow: 0 5px 0 var(--color-icons);
 }
 .controls .control i {
   font-size: larger;
+  cursor: pointer;
 }
 
 /*Header-content*/
@@ -190,10 +199,86 @@ section {
   transition: all 0.4s ease-out;
   z-index: -1;
 }
+.main-btn:hover {
+  transition: all 0.4s ease-out;
+}
 .main-btn:hover::before {
   width: 100%;
   height: 100%;
   background-color: var(--color-icons);
   transform: translateX(0);
   transition: all 0.4s ease-out;
+}
+
+.main-title {
+  text-align: center;
+}
+.main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.main-title h2 span {
+  color: var(--color-titles);
+}
+
+/*About section */
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+.about-container .right-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+}
+.about-container .right-about .about-item {
+  border: 1px solid var(--color-text);
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.about-container .right-about .about-item:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--color-icons);
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.32);
+}
+.about-container .right-about .about-item .about-text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.about-container .right-about .about-item .about-text .large-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.about-container .right-about .about-item .about-text .small-text {
+  padding-left: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--color-titles);
+  letter-spacing: 2px;
+}
+.about-container .right-about .about-item .about-text .small-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.body-text h3 {
+  position: inherit;
+  text-transform: uppercase;
+  font-size: 1.5 rem;
+  font-weight: 400;
+  color: var(--color-titles);
 }/*# sourceMappingURL=styles.css.map */

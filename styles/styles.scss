@@ -45,19 +45,23 @@ section{
 
 .section{
     transform: translateY(-100%) scale(0);
-    
     background-color: var(--color-primary);
 }
 
 .sec1{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: var(--color-primary);
 }
 
 .sec2{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: blueviolet;
+    background-color: var(--color-primary);
+    background: radial-gradient(circle, #2E4F4F 10%, transparent 11%),radial-gradient(circle at bottom left, #2E4F4F 5%, transparent 6%),radial-gradient(circle at bottom right, #2E4F4F 5%, transparent 6%),radial-gradient(circle at top left, #2E4F4F 5%, transparent 6%),radial-gradient(circle at top right, #2E4F4F 5%, transparent 6%);
+        background-size: 1em 1em;
+        background-color: #2C3333;
+        opacity: 1
 }
 
 .sec3{
@@ -75,7 +79,7 @@ section{
 
 .active{
     display: block;
-    animation: scaleAnim 1s ease-in-out;
+    /*(animation: scaleAnim 1s ease-in-out;
     @keyframes scaleAnim {
         0%{
             transform: translateY(-100%) scaleY(0);
@@ -83,7 +87,7 @@ section{
         100%{
             transform: translateY(0) scaleY(1);
         }
-    }
+    }*/
 }
 
 //Controls
@@ -99,6 +103,8 @@ section{
     transform: translate(-50%);
 
     .active-btn{
+        box-shadow: 0 2px 0 var(--color-icons);
+        transform: translateY(3px);
         background-color:var(--color-text) !important;
         //transition: all .4s ease-in-out;
         i{
@@ -117,10 +123,11 @@ section{
         justify-content: center;
         align-items: center;
         margin: .7rem 0;
+        box-shadow: 0 5px 0 var(--color-icons);
         //Agregar box shadow!!
         i{
             font-size: larger;
-            
+            cursor: pointer;
         }
     }
 }
@@ -166,9 +173,7 @@ section{
         p{
             margin: 1.5rem 0;
             line-height: 2rem;
-
-        }
-        
+        }  
     }
 }
 
@@ -208,6 +213,7 @@ section{
         z-index: -1;
     }
     &:hover{
+        transition: all .4s ease-out;
         &::before{
             width: 100%;
             height: 100%;
@@ -216,4 +222,97 @@ section{
             transition: all .4s ease-out;
         }
     }
+}
+
+.main-title{
+    text-align: center;
+    h2{
+        position:relative;
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 700;
+        span{
+            color: var(--color-titles);
+        }
+    }
+}
+
+/*About section */
+
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    .right-about{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+        .about-item{
+            border: 1px solid var(--color-text);
+            border-radius: 10px;
+            transition: all .4s ease-in-out;
+            box-shadow: 1px 2px 15px rgba(0,0,0,.1);
+            &:hover{
+                cursor: default;
+                transform: translateY(-5px);
+                border: 2px solid var(--color-titles);
+                box-shadow: 1px 2px 15px rgba(0,0,0,.32);
+            }
+            .about-text{
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                .large-text{
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: var(--color-text)
+                }
+                .small-text{
+                    padding-left: 3rem;
+                    position: relative;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    color: var(--color-titles);
+                    letter-spacing: 2px;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 15px;
+                        width: 2rem;
+                        height: 2px;
+                        background-color: var(--color-primary);
+                    }
+                }
+            }
+        }
+    }
+    .left-about{
+        padding-right: 5rem;
+        color: var(--color-titles);
+        p{
+            line-height: 2rem;
+            padding: 1rem;
+            color: var(--color-text);
+        }
+        h3{
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: var(--color-titles);
+        }
+    }
+}
+
+
+
+.body-text{
+    h3{
+        position: inherit;
+        text-transform: uppercase; 
+        font-size: 1.5 rem;
+        font-weight: 400;
+        color: var(--color-titles);
+    }
+    
 }
