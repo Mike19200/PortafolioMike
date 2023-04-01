@@ -6,17 +6,30 @@
 }
 
 :root {
-  --color-primary:#2C3333;
-  --color-titles: #0E8388;
-  --color-text: #CBE4DE;
-  --color-icons: #2E4F4F;
+  --color-primary:#222222;
+  --color-titles: #ffffff;
+  --color-text: #9D9C9B;
+  --color-icons: #58595b;
+  --font-titles: "new-order", sans-serif;
+  --font-text: "new-order", sans-serif;
+  --font-titless:"sneakers-script-wide", sans-serif;
 }
 
 body {
-  background-color: var(--color-primary);
-  font-family: "Poppins", sans-serif;
-  font-size: 17.5px;
+  background-color: #222222;
+  opacity: 1;
+  background-image: radial-gradient(#58595b 0.5px, #222222 0.5px);
+  background-size: 10px 10px;
+  font-family: "new-order", sans-serif;
+  font-weight: 400;
+  font-size: larger;
+  font-style: normal;
   color: var(--color-text);
+}
+body h1 {
+  font-family: "new-order", sans-serif;
+  font-weight: 700;
+  font-size: larger;
 }
 
 a {
@@ -24,6 +37,7 @@ a {
   text-decoration: none;
   color: inherit;
   font-family: inherit;
+  font-size: smaller;
 }
 
 header {
@@ -43,23 +57,30 @@ section {
 
 .section {
   transform: translateY(-100%) scale(0);
-  background-color: var(--color-primary);
+  background-color: #222222;
+  opacity: 1;
+  background-image: radial-gradient(#58595b 0.5px, #222222 0.5px);
+  background-size: 10px 10px;
 }
 
 .sec1 {
   display: none;
   transform: translateY(0) scale(1);
   background-color: var(--color-primary);
+  background-color: #222222;
+  opacity: 1;
+  background-image: radial-gradient(#58595b 0.5px, #222222 0.5px);
+  background-size: 10px 10px;
 }
 
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
   background-color: var(--color-primary);
-  background: radial-gradient(circle, #2E4F4F 10%, transparent 11%), radial-gradient(circle at bottom left, #2E4F4F 5%, transparent 6%), radial-gradient(circle at bottom right, #2E4F4F 5%, transparent 6%), radial-gradient(circle at top left, #2E4F4F 5%, transparent 6%), radial-gradient(circle at top right, #2E4F4F 5%, transparent 6%);
-  background-size: 1em 1em;
-  background-color: #2C3333;
+  background-color: #222222;
   opacity: 1;
+  background-image: radial-gradient(#58595b 0.5px, #222222 0.5px);
+  background-size: 10px 10px;
 }
 
 .sec3 {
@@ -140,7 +161,7 @@ section {
   transition: all 0.4s ease-in-out;
   width: 75%;
   height: 100%;
-  background-color: var(--color-icons);
+  background-color: #323232;
   position: absolute;
   left: -20%;
   top: 0;
@@ -214,6 +235,7 @@ section {
   text-align: center;
 }
 .main-title h2 {
+  font-family: var(--font-titles);
   position: relative;
   text-transform: uppercase;
   font-size: 4rem;
@@ -226,43 +248,43 @@ section {
 /*About section */
 .about-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding-top: 3.5rem;
-  padding-bottom: 5rem;
+  grid-template-columns: repeat(2, 1.5fr);
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
 }
 .about-container .right-about {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem;
+  grid-template-columns: repeat(2, 3fr);
+  grid-gap: 2rem;
 }
 .about-container .right-about .about-item {
-  border: 1px solid var(--color-text);
-  border-radius: 5px;
+  border: 2px solid var(--color-text);
+  border-radius: 10px;
   transition: all 0.4s ease-in-out;
   box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
 }
 .about-container .right-about .about-item:hover {
   cursor: default;
   transform: translateY(-5px);
-  border: 1px solid var(--color-icons);
+  border: 2px solid var(--color-titles);
   box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.32);
 }
 .about-container .right-about .about-item .about-text {
   padding: 1.5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .about-container .right-about .about-item .about-text .large-text {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-titles);
 }
 .about-container .right-about .about-item .about-text .small-text {
   padding-left: 3rem;
   position: relative;
   text-transform: uppercase;
   font-size: 1.2rem;
-  color: var(--color-titles);
+  color: var(--color-text);
   letter-spacing: 2px;
 }
 .about-container .right-about .about-item .about-text .small-text::before {
@@ -274,6 +296,21 @@ section {
   height: 2px;
   background-color: var(--color-primary);
 }
+.about-container .left-about {
+  padding-right: 3rem;
+  color: var(--color-titles);
+}
+.about-container .left-about p {
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--color-text);
+}
+.about-container .left-about h3 {
+  font-family: var(--font-titles);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
 
 .body-text h3 {
   position: inherit;
@@ -281,4 +318,5 @@ section {
   font-size: 1.5 rem;
   font-weight: 400;
   color: var(--color-titles);
+  font-family: var(--font-titles);
 }/*# sourceMappingURL=styles.css.map */
