@@ -320,10 +320,72 @@ section{
         }
         h3{
             font-family: var(--font-titles);
-            font-size: 2rem;
+            font-size: 1.7rem;
             text-transform: uppercase;
-            color: var(--color-text);
+            color: var(--color-titles);
         }
+    }
+}
+
+.about-stats{
+    padding-bottom: 4rem;
+    .progress-bars{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        .progress-bar{
+            display: flex;
+            flex-direction: column;
+            .prog-title{
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+            .progress-con{
+                display: flex;
+                align-items: center;
+                .prog-text{
+                    color: var(--color-titles);
+                }
+                .progress{
+                    width: 100%;
+                    height: .45rem;
+                    background-color: var(--color-icons);
+                    margin-left: 1rem;
+                    position: relative;
+                    span{
+                       position: absolute; 
+                       top: 0;
+                       left: 0;
+                       height: 100%;
+                       background-color: var(--color-titles);
+                       transition: all .4s ease-in-out;
+                    }
+                    .c{
+                        width: 85%;
+                    }
+                    .html{
+                        width: 90%;
+                    }
+                    .js{
+                        width: 60%;
+                    }
+                    .unity{
+                        width: 100%;
+                    }
+                    .swift{
+                        width: 30%;
+                    }
+                    .figma{
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+    h4{
+        color: var(--color-titles);
+        font-size: x-large;
+        text-transform: uppercase;
     }
 }
 
