@@ -431,18 +431,24 @@ section {
 }
 
 /*Projects*/
-.projects-title {
-  text-align: center;
+.Duskworld-Section {
+  display: grid;
+  grid-template-columns: repeat(3, 1.5fr);
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
 }
-.projects-title h2 {
-  font-family: var(--font-titles);
-  position: relative;
-  text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 700;
+.Duskworld-Section .right-duskworld .Duskworld-Imgicon {
+  height: 45px;
+  width: 45px;
+  image-rendering: auto;
 }
-.projects-title h2 span {
+.Duskworld-Section .right-duskworld h1 {
   color: var(--color-titles);
+  font-size: x-large;
+  text-transform: uppercase;
+}
+.Duskworld-Section .right-duskworld h2 {
+  text-transform: lowercase;
 }
 
 .body-text h3 {

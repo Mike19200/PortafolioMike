@@ -447,19 +447,26 @@ section{
 }
 
 /*Projects*/
-.projects-title{
-    text-align: center;
-    h2{
-        font-family: var(--font-titles);
-        position:relative;
-        text-transform: uppercase;
-        font-size: 4rem;
-        font-weight: 700;
-        span{
+.Duskworld-Section{
+    display: grid;
+    grid-template-columns: repeat(3, 1.5fr);
+    padding-top: 3rem;
+    padding-bottom: 0.5rem;
+    .right-duskworld{
+        .Duskworld-Imgicon{
+            height: 45px;
+            width: 45px;
+            image-rendering: auto;
+        }
+        h1{
             color: var(--color-titles);
+            font-size: x-large;
+            text-transform: uppercase; 
+        }
+        h2{
+            text-transform: lowercase;
         }
     }
-
 }
 
 
