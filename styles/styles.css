@@ -366,7 +366,7 @@ section {
   width: 30%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .figma {
-  width: 70%;
+  width: 80%;
 }
 .about-stats h4 {
   color: var(--color-titles);
@@ -437,18 +437,28 @@ section {
   padding-top: 3rem;
   padding-bottom: 0.5rem;
 }
-.Duskworld-Section .right-duskworld .Duskworld-Imgicon {
+.Duskworld-Section .left-duskworld .Duskworld-Imgicon {
   height: 45px;
   width: 45px;
   image-rendering: auto;
 }
-.Duskworld-Section .right-duskworld h1 {
+.Duskworld-Section .left-duskworld h1 {
   color: var(--color-titles);
   font-size: x-large;
   text-transform: uppercase;
 }
-.Duskworld-Section .right-duskworld h2 {
-  text-transform: lowercase;
+.Duskworld-Section .left-duskworld h2 {
+  font-size: medium;
+  color: var(--color-titles);
+}
+.Duskworld-Section .right-duskworld {
+  position: absolute;
+  flex-direction: row;
+  right: 250px;
+  top: 250px;
+}
+.Duskworld-Section .right-duskworld Screenshot-center {
+  position: center;
 }
 
 .body-text h3 {

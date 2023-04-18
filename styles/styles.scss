@@ -149,6 +149,7 @@ section{
         i{
             font-size: larger;
             cursor: pointer;
+            
         }
     }
 }
@@ -376,7 +377,7 @@ section{
                         width: 30%;
                     }
                     .figma{
-                        width: 70%;
+                        width: 80%;
                     }
                 }
             }
@@ -452,7 +453,7 @@ section{
     grid-template-columns: repeat(3, 1.5fr);
     padding-top: 3rem;
     padding-bottom: 0.5rem;
-    .right-duskworld{
+    .left-duskworld{
         .Duskworld-Imgicon{
             height: 45px;
             width: 45px;
@@ -464,7 +465,18 @@ section{
             text-transform: uppercase; 
         }
         h2{
-            text-transform: lowercase;
+            font-size: medium;
+            color: var(--color-titles);
+        }
+    }
+    .right-duskworld{
+        position: absolute;
+        flex-direction:row;
+        right: 250px;
+        top: 250px;
+        Screenshot-center{
+            position: center;
+
         }
     }
 }
