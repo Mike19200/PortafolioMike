@@ -1,2 +1,5 @@
 # PortafolioMike
-this gonna be the code of my portafolio website using HTML/SCSS/CSS/JavaScript
+
+First proyect using HTML/SCSS/CSS/Javascript
+this is not a responsive page for better experience open it in a PC and place the view scale in 80%
+
