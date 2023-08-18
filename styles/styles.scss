@@ -267,42 +267,48 @@ section{
     grid-template-columns: repeat(2, 1.5fr);
     padding-top: 3rem;
     padding-bottom: 0.5rem;
-    .right-about{
+    .right-about {
         display: grid;
-        grid-template-columns: repeat(2, 3fr);
+        grid-template-columns: repeat(2, 1fr); /* Cambiado a 1fr */
         grid-gap: 2rem;
-        .about-item{
+        
+        .about-item {
+            display: absolute;
             border: 2px solid var(--color-text);
             border-radius: 10px;
             transition: all .4s ease-in-out;
             box-shadow: 1px 2px 15px rgba(0,0,0,.1);
-            &:hover{
-                cursor: default;
-                transform: translateY(-5px);
+    
+            &:hover {
+                cursor: pointer; /* Cambiado de "default" a "pointer" */
+                transform: translateY(-2%); /* Cambiado a porcentaje */
                 border: 2px solid var(--color-titles);
                 box-shadow: 1px 2px 15px rgba(0,0,0,.32);
             }
-            .about-text{
-                padding: 1.5rem;
-                display: flex;
-                flex-direction:row;
-                .large-text{
-                    font-size: 3rem;
+    
+            .about-text {
+                padding: 1.5rem 1.5rem 1.5rem 0; /* Cambiado padding-right a 0 */
+                
+                .large-text {
+                    font-size: 3.5vw; /* Cambiado a vw */
                     font-weight: 700;
-                    color: var(--color-titles)
+                    color: var(--color-titles);
                 }
-                .small-text{
+    
+                .small-text {
                     padding-left: 3rem;
-                    position: relative;
+                    position: absolute;
                     text-transform: uppercase;
-                    font-size: 1.2rem;
+                    font-size: 1.5vw; /* Cambiado a vw */
                     color: var(--color-text);
-                    letter-spacing: 2px;
-                    &::before{
+                    letter-spacing: 0.2vw; /* Cambiado a vw */
+                    
+                    &::before {
                         content: '';
                         position: absolute;
                         left: 0;
-                        top: 15px;
+                        top: 50%; /* Alineado verticalmente */
+                        transform: translateY(-50%);
                         width: 2rem;
                         height: 2px;
                         background-color: var(--color-primary);
@@ -310,6 +316,8 @@ section{
                 }
             }
         }
+    }
+    
     }
     .left-about{
         padding-right: 3rem;
@@ -326,7 +334,7 @@ section{
             color: var(--color-titles);
         }
     }
-}
+
 
 .about-stats{
     padding-bottom: 4rem;
